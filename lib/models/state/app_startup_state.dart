@@ -1,0 +1,1 @@
+enum AppStartupState {intro, home }
