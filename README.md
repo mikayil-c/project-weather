@@ -7,7 +7,7 @@ A modern, open-source weather app built with Flutter. Designed to explore state 
   <img src="screenshoots/content_gif.gif" alt="content" width="250"/>
 </p>
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -39,13 +39,13 @@ flutter run
 
 ## ✨ Features
 
-* 🌍 Multi-language support (system locale detection)
-* 📦 Local caching for instant weather display
-* 📡 Background refresh for updated forecasts
-* 📱 Dynamic theme & unit settings
-* ⚡ Smooth performance with async handling & frame-drop prevention
+* Multi-language support (system locale detection)
+   Local caching for instant weather display
+* Background refresh for updated forecasts
+* Dynamic theme & unit settings
+* Smooth performance with async handling & frame-drop prevention
 
-## 📖 How It Works
+## How It Works
 
 1. **On app launch:**
    * Registers adapters
@@ -63,7 +63,7 @@ flutter run
    * If no saved locations → navigates to **Intro Page**
      * User can select a location or allow location detection
 
-## 🎯 Why This Project Exists
+## Why This Project Exists
 
 This project was created as a learning journey:
 
