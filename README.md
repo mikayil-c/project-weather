@@ -29,7 +29,7 @@ flutter pub get
 flutter run
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Flutter** (State Management: Riverpod / Provider)
 * **Hive** (Local Storage & Caching)
@@ -37,7 +37,7 @@ flutter run
 * **Nominatim (OpenStreetMap)**
 * **intl / ARB** (Localization & Multi-language support)
 
-## ✨ Features
+## Features
 
 * Multi-language support (system locale detection)
    Local caching for instant weather display
