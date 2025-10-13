@@ -1,0 +1,479 @@
+{
+  "@@locale": "en",
+  "lookingToSky": "Looking to the sky...",
+  "@lookingToSky": {
+    "description": "Text shown on app startup when loading"
+  },
+  "startingFeelsWrong": "Starting feels wrong...",
+  "@startingFeelsWrong": {
+    "description": "Error title displayed on app startup"
+  },
+  "somethingWrongWithInternet": "There is something wrong with internet...",
+  "@somethingWrongWithInternet": {
+    "description": "Error text displayed on no internet connection"
+  },
+  "pleaseTryAgain": "Please try again.",
+  "@pleaseTryAgain": {
+    "description": "Error message displayed on app startup"
+  },
+  "introDetail": "To start the app select a location or allow us to find your location",
+  "@introDetail": {
+    "description": "Information text about location selection"
+  },
+  "introSelectButton": "Select location",
+  "@introSelectButton": {
+    "description": "Button text for selecting a location"
+  },
+  "introFindButton": "Automate my location",
+  "@introFindButton": {
+    "description": "Button text for automatically finding the user's location"
+  },
+  "locSelectHint": "search",
+  "@locSelectHint": {
+    "description": "Hint text in the location search field"
+  },
+  "locSelectEnterName": "Enter a location name",
+  "@locSelectEnterName": {
+    "description": "Text shown when search input is less than 2 characters"
+  },
+  "locSelectNoLocations": "No locations found",
+  "@locSelectNoLocations": {
+    "description": "Text shown when no locations match the search"
+  },
+  "locSelectGettingInfos": "Getting infos from birds...",
+  "@locSelectGettingInfos": {
+    "description": "Text shown while searching for locations"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Label for settings section"
+  },
+  "selectLocation": "Select location",
+  "@selectLocation": {
+    "description": "Label for selecting a location"
+  },
+  "tryAgain": "Try again",
+  "@tryAgain": {
+    "description": "Generic 'try again' text used in various places"
+  },
+  "noSavedLocations": "No saved location",
+  "@noSavedLocations": {
+    "description": "Message shown when there are no saved locations"
+  },
+  "latest": "latest",
+  "@latest": {
+    "description": "Label for latest data"
+  },
+  "feelsLike": "feels like",
+  "@feelsLike": {
+    "description": "Label for feels-like temperature"
+  },
+  "daysNotAppeared": "Oops. Days not appeared :(",
+  "@daysNotAppeared": {
+    "description": "Error text shown when daily forecast is missing (corrected spelling)"
+  },
+  "northLetter": "N",
+  "@northLetter": {
+    "description": "Short for North direction"
+  },
+  "southLetter": "S",
+  "@southLetter": {
+    "description": "Short for South direction"
+  },
+  "westLetter": "W",
+  "@westLetter": {
+    "description": "Short for West direction"
+  },
+  "eastLetter": "E",
+  "@eastLetter": {
+    "description": "Short for East direction"
+  },
+  "wind": "Wind",
+  "@wind": {
+    "description": "Label for wind information"
+  },
+  "unit": "Unit",
+  "@unit": {
+    "description": "Measurement unit label"
+  },
+  "resetAllData": "Reset All Data",
+  "@resetAllData": {
+    "description": "Button to reset all stored app data"
+  },
+  "selectUnit": "Select a unit",
+  "@selectUnit": {
+    "description": "Instruction to choose a measurement unit"
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "Confirmation button text (standardized capitalization)"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button text"
+  },
+  "clear": "Clear",
+  "@clear": {
+    "description": "Clear button text"
+  },
+  "thisWillClearAllData": "This will clear all data(including locations) and navigate to intro page.",
+  "@thisWillClearAllData": {
+    "description": "Warning message before clearing all app data"
+  },
+  "heavyFog": "Heavy fog",
+  "@heavyFog": {
+    "description": "Weather condition: heavy fog"
+  },
+  "fog": "Fog",
+  "@fog": {
+    "description": "Weather condition: fog"
+  },
+  "veryLowVisibility": "Very low visibility",
+  "@veryLowVisibility": {
+    "description": "Visibility condition: very low (less than 1km)"
+  },
+  "lowVisibility": "Low visibility",
+  "@lowVisibility": {
+    "description": "Visibility condition: low (1-4km)"
+  },
+  "limited": "Limited visibility",
+  "@limited": {
+    "description": "General label for limited status"
+  },
+  "medium": "Medium visibility",
+  "@medium": {
+    "description": "General label for medium level"
+  },
+  "veryClear": "Very clear visibility",
+  "@veryClear": {
+    "description": "Visibility condition: very clear"
+  },
+  "heavyFogInfo": "Visibility less than 50m - driving is dangerous",
+  "@heavyFogInfo": {
+    "description": "Safety warning for heavy fog conditions with specific distance"
+  },
+  "fogInfo": "Visibility up to 200m - be careful while driving",
+  "@fogInfo": {
+    "description": "Safety warning for fog conditions with specific distance"
+  },
+  "veryLowVisibilityInfo": "Fog or heavy rain",
+  "@veryLowVisibilityInfo": {
+    "description": "Information for vision about very low visibility effects"
+  },
+  "lowVisibilityInfo": "Light fog or rain",
+  "@lowVisibilityInfo": {
+    "description": "Information for vision about low visibility effects (removed extra space)"
+  },
+  "limitedInfo": "Hazy weather",
+  "@limitedInfo": {
+    "description": "Information for vision about limited visibility effects"
+  },
+  "mediumVisibilityInfo": "Medium visibility up to 20km, slightly cloudy",
+  "@mediumVisibilityInfo": {
+    "description": "Information about medium visibility conditions"
+  },
+  "clearInfo": "Good visibility up to 40km, clear weather",
+  "@clearInfo": {
+    "description": "Information about clear visibility conditions"
+  },
+  "veryClearInfo": "Everything is fine",
+  "@veryClearInfo": {
+    "description": "Information for vision about very clear visibility effects"
+  },
+  "lowHum": "Low",
+  "@lowHum": {
+    "description": "Humidity condition: low"
+  },
+  "mediumHum": "Medium",
+  "@mediumHum": {
+    "description": "Humidity condition: medium"
+  },
+  "highHum": "High",
+  "@highHum": {
+    "description": "Humidity condition: high"
+  },
+  "veryHighHum": "Very high",
+  "@veryHighHum": {
+    "description": "Humidity condition: very high"
+  },
+  "lowHumidityInfo": "Dry air may cause skin and throat dryness",
+  "@lowHumidityInfo": {
+    "description": "Health information about low humidity effects"
+  },
+  "mediumHumidityInfo": "Comfortable humidity range for most people",
+  "@mediumHumidityInfo": {
+    "description": "Comfort information about medium humidity levels"
+  },
+  "highHumidityInfo": "High humidity may cause discomfort and reduced sweat evaporation",
+  "@highHumidityInfo": {
+    "description": "Comfort information about high humidity effects"
+  },
+  "veryHighHumidityInfo": "Very uncomfortable, potentially unhealthy conditions",
+  "@veryHighHumidityInfo": {
+    "description": "Health warning about very high humidity levels"
+  },
+  "veryLowPressure": "Very low",
+  "@veryLowPressure": {
+    "description": "Atmospheric pressure condition: very low (storm conditions)"
+  },
+  "lowPressure": "Low",
+  "@lowPressure": {
+    "description": "Atmospheric pressure condition: low (rainy weather)"
+  },
+  "mediumPressure": "Medium",
+  "@mediumPressure": {
+    "description": "Atmospheric pressure condition: medium (variable weather)"
+  },
+  "highPressure": "High",
+  "@highPressure": {
+    "description": "Atmospheric pressure condition: high (clear weather)"
+  },
+  "veryHighPressure": "Very high",
+  "@veryHighPressure": {
+    "description": "Atmospheric pressure condition: very high (very clear weather)"
+  },
+  "veryLowPressureInfo": "Storms and severe weather conditions are expected",
+  "@veryLowPressureInfo": {
+    "description": "Information about very low pressure effects"
+  },
+  "lowPressureInfo": "Rainy and cloudy weather is possible",
+  "@lowPressureInfo": {
+    "description": "Information about low pressure effects"
+  },
+  "mediumPressureInfo": "Mixed weather conditions may vary",
+  "@mediumPressureInfo": {
+    "description": "Information about medium pressure effects"
+  },
+  "highPressureInfo": "Clear and sunny weather is expected",
+  "@highPressureInfo": {
+    "description": "Information about high pressure effects"
+  },
+  "veryHighPressureInfo": "Very clear and calm weather conditions",
+  "@veryHighPressureInfo": {
+    "description": "Information about very high pressure effects"
+  },
+  "standart": "Standard",
+  "@standart": {
+    "description": "Unit system: Standard"
+  },
+  "metric": "Metric",
+  "@metric": {
+    "description": "Unit system: Metric"
+  },
+  "imperial": "Imperial",
+  "@imperial": {
+    "description": "Unit system: Imperial"
+  },
+  "calmWind": "Calm",
+  "@calmWind": {
+    "description": "Wind condition: calm"
+  },
+  "lightBreezeWind": "Light breeze",
+  "@lightBreezeWind": {
+    "description": "Wind condition: light breeze"
+  },
+  "gentleBreezeWind": "Gentle breeze",
+  "@gentleBreezeWind": {
+    "description": "Wind condition: gentle breeze"
+  },
+  "moderateBreezeWind": "Moderate breeze",
+  "@moderateBreezeWind": {
+    "description": "Wind condition: moderate breeze"
+  },
+  "strongBreezeWind": "Strong breeze",
+  "@strongBreezeWind": {
+    "description": "Wind condition: strong breeze"
+  },
+  "galeWind": "Gale",
+  "@galeWind": {
+    "description": "Wind condition: gale"
+  },
+  "stormWind": "Storm",
+  "@stormWind": {
+    "description": "Wind condition: storm"
+  },
+  "calmWindInfo": "Not a leaf is moving",
+  "@calmWindInfo": {
+    "description": "Information about calm wind"
+  },
+  "lightBreezeWindInfo": "Leaves are swaying",
+  "@lightBreezeWindInfo": {
+    "description": "Information about light breeze wind"
+  },
+  "gentleBreezeWindInfo": "Branches and small trees are swaying",
+  "@gentleBreezeWindInfo": {
+    "description": "Information about gentle breeze wind"
+  },
+  "moderateBreezeWindInfo": "Big trees are swaying",
+  "@moderateBreezeWindInfo": {
+    "description": "Information about moderate breeze wind"
+  },
+  "strongBreezeWindInfo": "Trees are bending",
+  "@strongBreezeWindInfo": {
+    "description": "Information about strong breeze wind"
+  },
+  "galeWindInfo": "It is hard to walk outside",
+  "@galeWindInfo": {
+    "description": "Information about gale wind"
+  },
+  "stormWindInfo": "Dangerous wind",
+  "@stormWindInfo": {
+    "description": "Information about storm wind"
+  },
+  "failedToSaveLoc": "Failed to save locations",
+  "@failedToSaveLoc": {
+    "description": "Error message when saving locations fails"
+  },
+  "failedToSaveWeather": "Failed to save weather",
+  "@failedToSaveWeather": {
+    "description": "Error message when saving weather data fails"
+  },
+  "failedToSaveDaily": "Failed to save daily forecast",
+  "@failedToSaveDaily": {
+    "description": "Error message when saving daily forecast fails"
+  },
+  "failedToSaveHourly": "Failed to save hourly forecast",
+  "@failedToSaveHourly": {
+    "description": "Error message when saving hourly forecast fails"
+  },
+  "locModelServiceClosed": "LocationModel service is closed",
+  "@locModelServiceClosed": {
+    "description": "Error message when location service is closed"
+  },
+  "permissionsDenied": "LocationModel permissions are denied",
+  "@permissionsDenied": {
+    "description": "Error message when location permissions are denied"
+  },
+  "permissionsPermanentlyBanned": "LocationModel permissions are permanently denied, enable them in settings",
+  "@permissionsPermanentlyBanned": {
+    "description": "Error message when location permissions are permanently denied"
+  },
+  "today": "Today",
+  "@today": {
+    "description": "Today text"
+  },
+  "monday": "Monday",
+  "@monday": {
+    "description": "Monday text"
+  },
+  "tuesday": "Tuesday",
+  "@tuesday": {
+    "description": "Tuesday text"
+  },
+  "wednesday": "Wednesday",
+  "@wednesday": {
+    "description": "Wednesday text"
+  },
+  "thursday": "Thursday",
+  "@thursday": {
+    "description": "Thursday text"
+  },
+  "friday": "Friday",
+  "@friday": {
+    "description": "Friday text"
+  },
+  "saturday": "Saturday",
+  "@saturday": {
+    "description": "Saturday text"
+  },
+  "sunday": "Sunday",
+  "@sunday": {
+    "description": "Sunday text"
+  },
+  "january": "January",
+  "@january": {
+    "description": "January text"
+  },
+  "february": "February",
+  "@february": {
+    "description": "February text"
+  },
+  "march": "March",
+  "@march": {
+    "description": "March text"
+  },
+  "april": "April",
+  "@april": {
+    "description": "April text"
+  },
+  "may": "May",
+  "@may": {
+    "description": "May text"
+  },
+  "june": "June",
+  "@june": {
+    "description": "June text"
+  },
+  "july": "July",
+  "@july": {
+    "description": "July text"
+  },
+  "august": "August",
+  "@august": {
+    "description": "August text"
+  },
+  "september": "September",
+  "@september": {
+    "description": "September text"
+  },
+  "october": "October",
+  "@october": {
+    "description": "October text"
+  },
+  "november": "November",
+  "@november": {
+    "description": "November text"
+  },
+  "december": "December",
+  "@december": {
+    "description": "December text"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Language text"
+  },
+  "selectLanguage": "Select a language",
+  "@selectLanguage": {
+    "description": "Select a language text"
+  },
+  "detectingLocation": "Detecting location...",
+  "@detectingLocation": {
+    "description": "Snackbar text while automate user's location"
+  },
+  "locationDetected": "Location detected",
+  "@locationDetected": {
+    "description": "Location detected text"
+  },
+  "locationDetectionTimedOut": "Location detection timed out",
+  "@locationDetectionTimedOut": {
+    "description": "Location detection timed out text"
+  },
+  "locationPermissionDenied": "Location permission denied",
+  "@locationPermissionDenied": {
+    "description": "Location permission denied text"
+  },
+  "locationServiceIsDisabled": "Location service is disabled",
+  "@locationServiceIsDisabled": {
+    "description": "Location service is disabled text"
+  },
+  "failedToDetectLocation": "Failed to detect location",
+  "@failedToDetectLocation": {
+    "description": "Failed to detect location text"
+  },
+  "retry": "Retry",
+  "@retry": {
+    "description": "Retry text"
+  },
+  "pleaseEnterMoreThanTwoChar": "Please enter more than 2 characters",
+  "@pleaseEnterMoreThanTwoChar": {
+    "description": "Please enter more than 2 characters text"
+  },
+  "pressure": "Pressure",
+  "@pressure": {
+    "description": "Pressure text"
+  },
+  "humidity": "Humidity",
+  "@humidity": {
+    "description": "Humidity text"
+  }
+}
