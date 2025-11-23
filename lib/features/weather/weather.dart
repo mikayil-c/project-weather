@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project_weather/features/weather/my_appbar.dart';
-import 'package:project_weather/features/weather/my_content.dart';
+import 'package:project_weather/features/weather/weather_app_bar.dart';
+import 'package:project_weather/features/weather/weather_content.dart';
 
 class Weather extends StatelessWidget {
   const Weather({super.key});
@@ -9,8 +9,8 @@ class Weather extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: MyAppbar(),
-      body: MyContent(),
+      appBar: WeatherAppBar(),
+      body: WeatherMainContent(),
     );
   }
 }

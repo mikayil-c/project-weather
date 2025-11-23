@@ -28,6 +28,8 @@ class ResetDialog extends StatelessWidget {
           onPressed: () async {
             await onClear();
 
+            if (!context.mounted) return;
+
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) => const Intro()),

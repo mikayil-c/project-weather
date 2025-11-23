@@ -25,6 +25,39 @@ class _LocationSelectionState extends ConsumerState<LocationSelection> {
 
   @override
   Widget build(BuildContext context) {
+    ref.listen(locationSelectionViewModelProvider, (previous, next) {
+      next.whenOrNull(
+        data: (state) {
+          if (!state.hasInternet &&
+              (previous?.valueOrNull?.hasInternet ?? true)) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Row(
+                  children: [
+                    const Icon(
+                      Icons.signal_wifi_connected_no_internet_4_rounded,
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        AppLocalizations.of(context)!.somethingWrongWithInternet,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
+                backgroundColor: Colors.red,
+                behavior: SnackBarBehavior.floating,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            );
+          }
+        },
+      );
+    });
+
     final locationSelectionState = ref.watch(
       locationSelectionViewModelProvider,
     );
@@ -68,43 +101,6 @@ class _LocationSelectionState extends ConsumerState<LocationSelection> {
             child: locationSelectionState.when(
               data: (state) {
                 final searchText = _searchController.text.trim();
-
-                if (!state.hasInternet) {
-                  WidgetsBinding.instance.addPostFrameCallback((_) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Row(
-                          children: [
-                            const Icon(
-                              Icons.signal_wifi_connected_no_internet_4_rounded,
-                            ),
-                            Text(
-                              AppLocalizations.of(
-                                context,
-                              )!.somethingWrongWithInternet,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ],
-                        ),
-
-                        backgroundColor: Colors.red,
-                        behavior: SnackBarBehavior.floating,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-
-                        // action is not active because i didnt fix overflow problem yet.
-
-                        // action: SnackBarAction(
-                        //   label: AppLocalizations.of(context)!.tryAgain,
-                        //   onPressed: () => ref
-                        //       .read(locationSelectionViewModelProvider.notifier)
-                        //       .searchLocations(_searchController.text),
-                        // ),
-                      ),
-                    );
-                  });
-                }
 
                 if (searchText.isEmpty) {
                   return SearchInfo(

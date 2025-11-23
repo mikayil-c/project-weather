@@ -1,3 +1,4 @@
+import 'package:project_weather/shared/providers/dio_provider.dart';
 import 'package:project_weather/shared/repositories/weather_repository.dart';
 import 'package:project_weather/shared/services/cache_service.dart';
 import 'package:project_weather/shared/services/location_service.dart';
@@ -10,9 +11,10 @@ final networkServiceProvider = Provider<NetworkService>(
   (ref) => NetworkService(),
 );
 
-final weatherServiceProvider = Provider<WeatherService>(
-  (ref) => WeatherService(),
-);
+final weatherServiceProvider = Provider<WeatherService>((ref) {
+  final dio = ref.read(dioProvider);
+  return WeatherService(dio);
+});
 
 final locationServiceProvider = Provider<LocationService>(
   (ref) => LocationService(),

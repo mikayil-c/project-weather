@@ -27,6 +27,8 @@ class LocationsData extends StatelessWidget {
             onTap: () async {
               await onTap(location);
 
+              if (!context.mounted) return;
+
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const Weather()),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:project_weather/features/location_selection/location_selection.dart';
 import 'package:project_weather/features/settings/settings.dart';
-import 'package:project_weather/features/weather/my_dropdown.dart';
+import 'package:project_weather/features/weather/location_dropdown.dart';
 
-class MyAppbar extends StatelessWidget implements PreferredSizeWidget {
-  const MyAppbar({super.key});
+class WeatherAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const WeatherAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class MyAppbar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       backgroundColor: Colors.transparent,
       foregroundColor: const Color.fromRGBO(245, 245, 245, 1),
-      title: const MyDropdown(),
+      title: const LocationDropdown(),
       centerTitle: true,
       leading: const SettingsButton(),
       actions: [const AddLocationButton()],

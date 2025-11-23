@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_weather/features/intro/intro.dart';
+
 import 'package:project_weather/features/settings/widgets/reset_button.dart';
 import 'package:project_weather/features/settings/widgets/settings_item.dart';
 import 'package:project_weather/l10n/app_localizations.dart';
@@ -80,13 +80,6 @@ class _SettingsState extends ConsumerState<Settings> {
             onClear: () async {
               await ref.read(locationNotifierProvider.notifier).clearState();
               await ref.read(weatherViewModelProvider.notifier).clearState();
-
-              if (!mounted) return;
-
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => const Intro()),
-              );
             },
           ),
         ],

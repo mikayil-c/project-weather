@@ -44,8 +44,7 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // the last time i checked, i had to read settings provider before start the app. i did not try afterwards.
-    ref.read(settingsProvider);
+
 
     Locale locale = ref.watch(localeProvider);
 

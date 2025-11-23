@@ -14,16 +14,49 @@ import 'package:project_weather/features/weather/widgets/wind_widget/wind_widget
 import 'package:project_weather/shared/widgets/loading_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class MyContent extends ConsumerStatefulWidget {
-  const MyContent({super.key});
+class WeatherMainContent extends ConsumerStatefulWidget {
+  const WeatherMainContent({super.key});
 
   @override
-  ConsumerState<MyContent> createState() => _MyContentState();
+  ConsumerState<WeatherMainContent> createState() => _WeatherMainContentState();
 }
 
-class _MyContentState extends ConsumerState<MyContent> {
+class _WeatherMainContentState extends ConsumerState<WeatherMainContent> {
   @override
   Widget build(BuildContext context) {
+    ref.listen(weatherViewModelProvider, (previous, next) {
+      next.whenOrNull(
+        data: (state) {
+          if (!state.hasInternet &&
+              (previous?.valueOrNull?.hasInternet ?? true)) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Row(
+                  children: [
+                    const Icon(
+                      Icons.signal_wifi_connected_no_internet_4_rounded,
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        AppLocalizations.of(context)!.somethingWrongWithInternet,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
+                backgroundColor: Colors.red,
+                behavior: SnackBarBehavior.floating,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            );
+          }
+        },
+      );
+    });
+
     final mainState = ref.watch(weatherViewModelProvider);
     final dt = ref.watch(
       weatherViewModelProvider.select((s) => s.valueOrNull?.weather?.dt),
@@ -57,40 +90,7 @@ class _MyContentState extends ConsumerState<MyContent> {
         Container(color: Colors.black.withValues(alpha: 0.3)),
         mainState.when(
           data: (state) {
-            if (!state.hasInternet) {
-              WidgetsBinding.instance.addPostFrameCallback((_) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Row(
-                      children: [
-                        const Icon(
-                          Icons.signal_wifi_connected_no_internet_4_rounded,
-                        ),
-                        Text(
-                          AppLocalizations.of(
-                            context,
-                          )!.somethingWrongWithInternet,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ],
-                    ),
-                    backgroundColor: Colors.red,
-                    behavior: SnackBarBehavior.floating,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    // action: SnackBarAction(
-                    //   label: localizations.tryAgain,
-                    //   onPressed: () => ref
-                    //       .read(locationSelectionViewModelProvider.notifier)
-                    //       .searchLocations(_searchController.text),
-                    // ),
-                  ),
-                );
-              });
-            }
-
-            return WeatherContent(
+            return WeatherContentBody(
               onRefresh: ref.read(weatherViewModelProvider.notifier).refresh,
             );
           },
@@ -125,9 +125,9 @@ class _MyContentState extends ConsumerState<MyContent> {
   }
 }
 
-class WeatherContent extends StatelessWidget {
+class WeatherContentBody extends StatelessWidget {
   final Future<void> Function() onRefresh;
-  const WeatherContent({super.key, required this.onRefresh});
+  const WeatherContentBody({super.key, required this.onRefresh});
 
   @override
   Widget build(BuildContext context) {

@@ -4,8 +4,8 @@ import 'package:project_weather/models/model/location_model.dart';
 import 'package:project_weather/shared/providers/location_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class MyDropdown extends ConsumerWidget {
-  const MyDropdown({super.key});
+class LocationDropdown extends ConsumerWidget {
+  const LocationDropdown({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -8,7 +8,9 @@ import 'package:project_weather/models/model/weather_model.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class WeatherService {
-  final Dio _dio = Dio();
+  final Dio _dio;
+
+  WeatherService(this._dio);
 
   Future<WeatherModel> fetchWeather(double lat, double lon, String lang) async {
     try {
@@ -25,6 +27,8 @@ class WeatherService {
       final Map<String, dynamic> data = response.data;
 
       return WeatherModel.fromJson(data);
+    } on DioException catch (e) {
+      throw Exception(e.message ?? 'Failed to fetch weather data');
     } catch (e) {
       throw Exception(e.toString());
     }
@@ -53,6 +57,8 @@ class WeatherService {
 
       final dailyForecast = DailyForecastPacket(list: list, timezone: timezone);
       return dailyForecast;
+    } on DioException catch (e) {
+      throw Exception(e.message ?? 'Failed to fetch daily forecast');
     } catch (e) {
       throw Exception(e.toString());
     }
@@ -92,6 +98,8 @@ class WeatherService {
         sunset: sunset,
       );
       return hourlyForecast;
+    } on DioException catch (e) {
+      throw Exception(e.message ?? 'Failed to fetch hourly forecast');
     } catch (e) {
       throw Exception(e.toString());
     }
